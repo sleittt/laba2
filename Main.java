@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-    public Main() {
-    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -10,16 +8,18 @@ public class Main {
         double x = scan.nextDouble();
         if (Math.abs(x) < 1) {
             System.out.println("Введите n");
-            int n = scan.nextInt();
+            double n = scan.nextDouble();
             double sum = 0;
             double res = 0;
 
-            for(double i = 0; i <= (double)n; ++i) {
+            for(double i = 0; i <= n; ++i) {
                 sum += Math.pow(x, 2 * i + 1) / (2 * i + 1);
-                System.out.println(sum);
             }
 
-            System.out.println(sum);
+            System.out.printf("Резултьтат=%f", sum);
+        }
+        else {
+            System.out.println("x не удовлетворяет условию");
         }
 
     }
